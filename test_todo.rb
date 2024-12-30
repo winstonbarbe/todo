@@ -100,71 +100,71 @@ else
   puts "TEST #9 failed"
 end
 
-# # Test 10
-# puts
-# puts "TEST 10: Test that new list has an empty array of tasks by default"
-# list = List.new("House Chores")
-# if list.tasks == []
-#   puts "TEST #10 passed"
-# else
-#   puts "TEST #10 failed"
-# end
+# Test 10
+puts
+puts "TEST 10: Test that new list has an empty array of tasks by default"
+list = List.new("House Chores")
+if list.tasks == []
+  puts "TEST #10 passed"
+else
+  puts "TEST #10 failed"
+end
 
-# # Test 11
-# puts
-# puts "TEST 11: Test that #add_task adds new task to the list, and that the task has the correct name"
-# list = List.new("House Chores")
-# list.add_task("Mow lawn")
-# if list.tasks[0].is_a?(Task) && list.tasks[0].name == "Mow lawn"
-#   puts "TEST #11 passed"
-# else
-#   puts "TEST #11 failed"
-# end
+# Test 11
+puts
+puts "TEST 11: Test that #add_task adds new task to the list, and that the task has the correct name"
+list = List.new("House Chores")
+list.add_task("Mow lawn")
+if list.tasks[0].is_a?(Task) && list.tasks[0].name == "Mow lawn"
+  puts "TEST #11 passed"
+else
+  puts "TEST #11 failed"
+end
 
-# # Test 12
-# puts
-# puts "TEST 12: Test that #incomplete_tasks method returns an array of all the incomplete tasks from the list:"
-# list = List.new("House Chores")
-# list.add_task("Mow lawn")
-# list.add_task("Clean laundry")
-# list.add_task("Feed alligator")
-# list.tasks[1].complete! # Complete the clean laundry task
-# incomplete_tasks = list.incomplete_tasks
-# if incomplete_tasks.length == 2 && incomplete_tasks[0].name == "Mow lawn" && incomplete_tasks[1].name == "Feed alligator"
-#   puts "TEST #12 passed"
-# else
-#   puts "TEST #12 failed"
-# end
+# Test 12
+puts
+puts "TEST 12: Test that #incomplete_tasks method returns an array of all the incomplete tasks from the list:"
+list = List.new("House Chores")
+list.add_task("Mow lawn")
+list.add_task("Clean laundry")
+list.add_task("Feed alligator")
+list.tasks[1].complete! # Complete the clean laundry task
+incomplete_tasks = list.incomplete_tasks
+if incomplete_tasks.length == 2 && incomplete_tasks[0].name == "Mow lawn" && incomplete_tasks[1].name == "Feed alligator"
+  puts "TEST #12 passed"
+else
+  puts "TEST #12 failed"
+end
 
-# # Test 13
-# puts
-# puts "TEST 13: Test that #sorted_by_due_date method returns an array of all the tasks in order from oldest date to newest date:"
-# list = List.new("House Chores")
-# list.add_task("Mow lawn")
-# list.add_task("Clean laundry")
-# list.add_task("Feed alligator")
-# list.tasks[0].set_due_date(5, 10, 2022)
-# list.tasks[1].set_due_date(7, 16, 2022)
-# list.tasks[2].set_due_date(3, 30, 2022)
-# sorted_tasks = list.sorted_by_due_date
-# if sorted_tasks[0].name == "Feed alligator" && sorted_tasks[1].name == "Mow lawn" && sorted_tasks[2].name == "Clean laundry"
-#   puts "TEST #13 passed"
-# else
-#   puts "TEST #13 failed"
-# end
+# Test 13
+puts
+puts "TEST 13: Test that #sorted_by_due_date method returns an array of all the tasks in order from oldest date to newest date:"
+list = List.new("House Chores")
+list.add_task("Mow lawn")
+list.add_task("Clean laundry")
+list.add_task("Feed alligator")
+list.tasks[0].set_due_date(5, 10, 2022)
+list.tasks[1].set_due_date(7, 16, 2022)
+list.tasks[2].set_due_date(3, 30, 2022)
+sorted_tasks = list.sorted_by_due_date
+if sorted_tasks[0].name == "Feed alligator" && sorted_tasks[1].name == "Mow lawn" && sorted_tasks[2].name == "Clean laundry"
+  puts "TEST #13 passed"
+else
+  puts "TEST #13 failed"
+end
 
-# # Test 14
-# puts
-# puts "TEST 14: Test that #sorted_by_due_date method returns an array of all the tasks in order from oldest date to newest date - and puts all tasks without a due date and the end of the array:"
-# list = List.new("House Chores")
-# list.add_task("Mow lawn")
-# list.add_task("Clean laundry")
-# list.add_task("Feed alligator")
-# list.tasks[1].set_due_date(7, 16, 2022)
-# list.tasks[2].set_due_date(3, 30, 2022)
-# sorted_tasks = list.sorted_by_due_date
-# if sorted_tasks[0].name == "Feed alligator" && sorted_tasks[1].name == "Clean laundry" && sorted_tasks[2].name == "Mow lawn"
-#   puts "TEST #14 passed"
-# else
-#   puts "TEST #14 failed"
-# end
+# Test 14
+puts
+puts "TEST 14: Test that #sorted_by_due_date method returns an array of all the tasks in order from oldest date to newest date - and puts all tasks without a due date and the end of the array:"
+list = List.new("House Chores")
+list.add_task("Mow lawn")
+list.add_task("Clean laundry")
+list.add_task("Feed alligator")
+list.tasks[1].set_due_date(7, 16, 2022)
+list.tasks[2].set_due_date(3, 30, 2022)
+sorted_tasks = list.sorted_by_due_date
+if sorted_tasks[0].name == "Feed alligator" && sorted_tasks[1].name == "Clean laundry" && sorted_tasks[2].name == "Mow lawn"
+  puts "TEST #14 passed"
+else
+  puts "TEST #14 failed"
+end

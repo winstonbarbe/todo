@@ -7,6 +7,7 @@ class Task
     # Complete this method!
     @name = name
     @completed = false
+    @due_date = false
   end
 
   def complete!
