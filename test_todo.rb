@@ -12,93 +12,93 @@ else
   puts "TEST #1 failed"
 end
 
-# # Test 2
-# puts
-# puts "TEST 2: Test that the method #complete! should set task's complete attribute to true:"
-# task = Task.new("Mow lawn")
-# task.complete!
-# if task.completed == true
-#   puts "TEST #2 passed"
-# else
-#   puts "TEST #2 failed"
-# end
+# Test 2
+puts
+puts "TEST 2: Test that the method #complete! should set task's complete attribute to true:"
+task = Task.new("Mow lawn")
+task.complete!
+if task.completed == true
+  puts "TEST #2 passed"
+else
+  puts "TEST #2 failed"
+end
 
 # # Test 3
-# puts
-# puts "TEST 3: Test that the method #set_due_date should set task's due date to be the correct Date object"
-# task = Task.new("Mow lawn")
-# task.set_due_date(5, 22, 2022)
-# if task.due_date == Date.new(2022, 5, 22)
-#   puts "TEST #3 passed"
-# else
-#   puts "TEST #3 failed"
-# end
+puts
+puts "TEST 3: Test that the method #set_due_date should set task's due date to be the correct Date object"
+task = Task.new("Mow lawn")
+task.set_due_date(5, 22, 2022)
+if task.due_date == Date.new(2022, 5, 22)
+  puts "TEST #3 passed"
+else
+  puts "TEST #3 failed"
+end
 
-# # Test 4
-# puts
-# puts "TEST 4: The #overdue? method should return true if the task has not completed AND has a due date AND the current day is past the due date"
-# task = Task.new("Mow lawn")
-# task.set_due_date(1, 19, 1985)
-# if task.overdue?
-#   puts "TEST #4 passed"
-# else
-#   puts "TEST #4 failed"
-# end
+# Test 4
+puts
+puts "TEST 4: The #overdue? method should return true if the task has not completed AND has a due date AND the current day is past the due date"
+task = Task.new("Mow lawn")
+task.set_due_date(1, 19, 1985)
+if task.overdue?
+  puts "TEST #4 passed"
+else
+  puts "TEST #4 failed"
+end
 
-# # Test 5
-# puts
-# puts "TEST 5: The #overdue? method should return false if the task has been completed no matter what the due date is:"
-# task = Task.new("Mow lawn")
-# task.set_due_date(1, 19, 1985)
-# task.complete!
-# if !task.overdue?
-#   puts "TEST #5 passed"
-# else
-#   puts "TEST #5 failed"
-# end
+# Test 5
+puts
+puts "TEST 5: The #overdue? method should return false if the task has been completed no matter what the due date is:"
+task = Task.new("Mow lawn")
+task.set_due_date(1, 19, 1985)
+task.complete!
+if !task.overdue?
+  puts "TEST #5 passed"
+else
+  puts "TEST #5 failed"
+end
 
-# # Test 6
-# puts
-# puts "TEST 6: The #overdue? method should return false if the task has has no due date:"
-# task = Task.new("Mow lawn")
-# if !task.overdue?
-#   puts "TEST #6 passed"
-# else
-#   puts "TEST #6 failed"
-# end
+# Test 6
+puts
+puts "TEST 6: The #overdue? method should return false if the task has has no due date:"
+task = Task.new("Mow lawn")
+if !task.overdue?
+  puts "TEST #6 passed"
+else
+  puts "TEST #6 failed"
+end
 
-# # Test 7
-# puts
-# puts "TEST 7: The #friendly_due_date method should return the string 'NO DUE DATE' if the task has no due date:"
-# task = Task.new("Mow lawn")
-# if task.friendly_due_date == "NO DUE DATE"
-#   puts "TEST #7 passed"
-# else
-#   puts "TEST #7 failed"
-# end
+# Test 7
+puts
+puts "TEST 7: The #friendly_due_date method should return the string 'NO DUE DATE' if the task has no due date:"
+task = Task.new("Mow lawn")
+if task.friendly_due_date == "NO DUE DATE"
+  puts "TEST #7 passed"
+else
+  puts "TEST #7 failed"
+end
 
-# # Test 8
-# puts
-# puts "TEST 8: If the task has a due date, the #friendly_due_date method should return the string according to the strftime('%b %d, %Y') format"
-# task = Task.new("Mow lawn")
-# task.set_due_date(5, 22, 2022)
-# if task.friendly_due_date == Date.new(2022, 5, 22).strftime("%b %d, %Y")
-#   puts "TEST #8 passed"
-# else
-#   puts "TEST #8 failed"
-# end
+# Test 8
+puts
+puts "TEST 8: If the task has a due date, the #friendly_due_date method should return the string according to the strftime('%b %d, %Y') format"
+task = Task.new("Mow lawn")
+task.set_due_date(5, 22, 2022)
+if task.friendly_due_date == Date.new(2022, 5, 22).strftime("%b %d, %Y")
+  puts "TEST #8 passed"
+else
+  puts "TEST #8 failed"
+end
 
-# # # Tests for class List:
+# # Tests for class List:
 
-# # Test 9
-# puts
-# puts "TEST 9: Test that new list has a name"
-# list = List.new("House Chores")
-# if list.name == "House Chores"
-#   puts "TEST #9 passed"
-# else
-#   puts "TEST #9 failed"
-# end
+# Test 9
+puts
+puts "TEST 9: Test that new list has a name"
+list = List.new("House Chores")
+if list.name == "House Chores"
+  puts "TEST #9 passed"
+else
+  puts "TEST #9 failed"
+end
 
 # # Test 10
 # puts
